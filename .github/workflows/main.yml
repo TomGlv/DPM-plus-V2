@@ -1,0 +1,36 @@
+name: DPM-Plus
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  check-match:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Run Tracker
+        env:
+          RIOT_KEY: ${{ secrets.RIOT_KEY }}
+          WEBHOOK: ${{ secrets.WEBHOOK }}
+        run: python OPGG_.py
+
+      - name: Save Last Match ID
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add last_match.txt
+          git commit -m "Update last match ID" || exit 0
+          git push

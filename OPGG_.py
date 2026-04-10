@@ -78,7 +78,7 @@ def main():
                         {"name": "⚔️ COMBAT", "value": f"**KDA**: {p['kills']}/{p['deaths']}/{p['assists']}\n**KP**: {kp}%", "inline": True},
                         {"name": "💰 ECONOMY", "value": f"**CS**: {cs} ({cs_min}/m)\n**Damage**: {p['totalDamageDealtToChampions']}", "inline": True}
                     ],
-                    "footer": {"text": f"Mamad0uBalTr0u • {match_id}"},
+                    "footer": {"text": f"DembouzPartouz • {match_id}"},
                     "timestamp": time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
                 }]
             }

@@ -5,7 +5,7 @@ import time
 # Configuration
 API_KEY = os.getenv("RIOT_KEY")
 WEBHOOK = os.getenv("WEBHOOK")
-GAME_NAME = "Mamad0uBalTr0u"
+GAME_NAME = "DembouzPartouz"
 TAG_LINE = "669"
 REGION = "europe"
 PLATFORM = "euw1"

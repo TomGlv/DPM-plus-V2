@@ -1,6 +1,6 @@
 # lol-match-notifier-v2
 
-> V2 of the match notifier: richer Discord embeds with KDA, kill participation, LP and distance to Master.
+> Second deployment of [lol-match-notifier](https://github.com/TomGlv/lol-match-notifier) for another player: new League of Legends games, KDA, LP and distance to Master posted to Discord.
 
 ## How it works
 - **GitHub Actions** cron every 10 minutes
